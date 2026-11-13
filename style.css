@@ -6,12 +6,19 @@
 
 @font-face {
     font-family: 'Press2P';
-    src: url(fonts/PressS2P.ttf)  format('truetype');
+    src: url(font/PressS2P.ttf)  format('truetype');
 }
 
 @font-face {
     font-family: 'viaoda';
-    src: url(fonts/ViaodaLibre.ttf)  format('truetype');
+    src: url(font/ViaodaLibre.ttf) format('truetype');
+}
+
+section {
+  width: 100%;
+  padding: 4rem 2rem;
+  font-family: 'viaoda';
+
 }
 
 /*NAVIGASI BAR*/
@@ -81,12 +88,45 @@ nav ul li:hover ul.navbar-down {
   height: auto;
 }
 
+.footer {
+  background-color: #000000;
+  color: whitesmoke;
+}
 
 /*--------HOME PAGE---------*/
-section {
+.home-tentang {
     width: 100%;
     padding: 4rem 2rem;
-    font-family: 'viaoda', sans-serif; 
+    font-family: 'viaoda'; 
+}
+
+.home-agensi {
+    width: 100%;
+    padding: 4rem 2rem;
+    font-family: 'viaoda'; 
+}
+
+.home-tentang {
+    background: linear-gradient( #ffffff, #f1f5f9, #cbd5e1, #94a3b8);
+    color: #0f172a;
+}
+
+.home-agensi {
+    background: linear-gradient(#94a3b8, #475569, #16214c);
+    color: #f8fafc;
+}
+
+.home-news{
+   background: linear-gradient( #27386d, #1b264f, #0d1224);
+    color: #151d4f;
+}
+
+.news-header {
+  color: #d3dde8;
+}
+
+.view-more {
+  color: #d3dde8;
 }
 
 .container {
@@ -103,35 +143,100 @@ section {
     text-align: center;
 }
 
-.tentang {
-    background-color: #e5e5e5;
-    color: #151d4f;
+.logo-agensi {
+    width: 250px;   
+    margin: 20px auto;
 }
 
-.welcome {
-    background-color: #ffffff;
-    color: #151d4f;
+.logo-agensi img {
+    width: 250px;  
+    height: auto;    
+    display: block;
+    margin: 20px auto;
+    object-fit: contain;
 }
 
-.footer {
-    background-color: #1d2239;
-    color: whitesmoke;
+.news-container {
+    display: flex;
+    gap: 24px;                 
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
+.news-card {
+    background-color: #ffffff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 12px;       
+    padding: 30px;            
+    flex: 1;                   
+    display: flex;
+    flex-direction: column;
+}
 
+.news-card h3 {
+    font-size: 20px;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 25px;
+    flex-grow: 1;             
+}
+
+.btn-read {
+    display: inline-block;
+    background-color: #08165e; 
+    color: #ffffff;          
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;     
+    font-size: 13px;
+    font-weight: 600;
+    align-self: flex-start;    
+    transition: background-color 0.3s ease;
+}
+
+.btn-read:hover {
+    background-color: #000000;
+}
+
+/*---- Artikel---- */
+.container-artikel{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.container-artikel h1 {
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+.artikel-link {
+  padding-top: 15px;
+}
 
 /*---------Stream LNGSHOT PAGE-----------*/
+.stream {
+  background: linear-gradient(#070c23,#3150ac, #b85c5f);
+  color: whitesmoke;
+}
 
 .container-stream {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
     text-align: justify;
-}
-
-.stream {
-    background-color: #e5e5e5;
-    color: #151d4f;
+    padding-bottom: 15px;
 }
 
 .gambar-stream {
@@ -141,6 +246,181 @@ section {
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+ 
+.container-boxstream {
+    display: flex;         
+    gap: 24px;
+    width: 100%;              
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.box {
+    flex: 1;                
+    background: linear-gradient(#f3f5fc, #eaeef9);
+    padding: 28px;
+    border-radius: 24px;
+    border-color:#3150ac;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+ 
+.box h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    color: #151d4f;
+}
+ 
+.box p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+    color: #151d4f;
+}
+
+
+
+/* Galeri */ 
+.container-galeri {
+  display: grid;                         
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 6px;                               
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-galeri a {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;      
+  overflow: hidden;
+  background: #e5e7ee;      
+}
+ 
+.container-galeri img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition-duration: 0.3s;
+}
+ 
+.container-galeri a:hover img {
+  transform: scale(1.06);
+}
+
+
+/*---------Profile Member PAGE-----------*/
+.profile-desc {
+  min-height: 60vh;              
+  display: flex;
+  flex-direction: column;
+  justify-content: center;         
+  align-items: center;             
+  text-align: center;
+  padding: 40px 20px;
+}
+ 
+.profile-desc h1 {
+  margin: 0;
+  font-size: clamp(60px, 14vw, 160px); 
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -4px;
+  color: #000;
+}
+ 
+.profile-desc p {
+  margin: 20px 0 0;
+  font-family: "Courier New", monospace;   
+  font-size: 13px;
+  color: #000;
+}
+ 
+.profile-fotobaris {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  
+  gap: 8px;
+  padding: 60px 8px 8px;
+}
+ 
+.profile-fotobaris img {
+  width: 100%;
+  height: 340px;             
+  object-fit: cover;         
+  border-radius: 14px;       
+  display: block;
+}
+
+.profile-fotobaris a:hover img {
+  transform: scale(1.06);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  min-height: 80vh;
+  padding: 0; 
+  width: 100%;              
+}
+
+.split .gambar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.split .gambar img {
+  width: 100%;
+  height: 100%;                                 
+  max-height: 80vh; 
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.split .teks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       
+  padding: 60px;
+  text-align: justify;
+  color: #151d4f;
+}
+
+.split .label {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.split h2 {
+  margin: 0 0 24px;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1.1;
+  color: #151d4f;
+}
+
+.split p {
+  margin: 0;
+  max-width: 380px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.ryul .gambar {
+  order: 2;                  
+}
+
+.louis .gambar {
+  order: 2;
+}
+
+
+.ohyul, .woojin { background: #F4F6F8;}
+.ryul, .louis  { background: #4c84be;}
 
 .box-wrapper {
   display: flex;          
@@ -148,25 +428,94 @@ section {
   max-width: 900px;
   margin: 0 auto;
 }
- 
 
-.box {
+.box-promobanana {
   flex: 1;                
-  background: #fff;
+  background: linear-gradient(#4c84be, #c8c8d8);
   padding: 28px;
-  border-radius: 24px;
-  border: 1px solid #101134;
+  border-radius: 24px; 
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
  
-.box h3 {
+.box-promobanana h3 {
   margin: 0 0 12px;
   font-size: 22px;
   color: #151d4f;
 }
  
-.box p {
-  margin: 0 0 20px;
+.box-promobanana p {
+  margin: 0 0 0;
   line-height: 1.7;
   color: #151d4f;
+}
+
+/*---------Profile Discography PAGE-----------*/
+
+.vinyl-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    animation: putarVinyl 8s linear infinite; 
+    background: transparent;
+}
+
+@keyframes putarVinyl {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.judul-disco {
+  background: linear-gradient(#070c23,#3150ac, #b85c5f);
+  color: whitesmoke;
+  display: flex;
+  align-items: center;     
+  justify-content: center;   
+  gap: 40px;
+}
+
+.disco {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.disco h2 {
+  font-size: 20px;
+  padding-bottom: 8px;            
+  border-bottom: 1px solid #bbb;  
+  margin-bottom: 20px;            
+}
+ 
+
+.album-baris {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+ 
+.album {
+  width: 130px;                  
+}
+ 
+.album img {
+  width: 100%;
+  aspect-ratio: 1 / 1;            
+  object-fit: cover;
+  display: block;
+}
+ 
+.album .judul {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #000;
+}
+ 
+.album .tahun {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #888;
 }

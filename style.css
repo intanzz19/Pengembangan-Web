@@ -66,12 +66,12 @@ nav ul li {
 
 
 nav ul li ul.navbar-down {
-    display: none; /* Sembunyikan saat awal */
+    display: none; 
     position: absolute;
-    top: 100%; /* Muncul tepat di bawah tulisan Profile */
+    top: 100%; 
     left: 0;
-    background-color: black; /* Sesuaikan warna background */
-    flex-direction: column; /* Ubah susunan jadi ke bawah (vertikal) */
+    background-color: black; 
+    flex-direction: column; 
     padding: 10px 0;
     min-width: 150px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
@@ -223,6 +223,22 @@ nav ul li:hover ul.navbar-down {
 
 .artikel-link {
   padding-top: 15px;
+}
+
+.artikel-photo {
+  text-align: center;
+  width: 100%;   
+  margin-bottom: 20px;
+}
+
+.artikel-photo img {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;  
+    max-width: 100%;
+    height: auto;    
+    display: flex;
+    object-fit: contain;
 }
 
 /*---------Stream LNGSHOT PAGE-----------*/
